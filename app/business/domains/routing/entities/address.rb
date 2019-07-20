@@ -9,4 +9,8 @@ class Domains::Routing::Entities::Address < Core::Entity
   attribute :state, Types::String
   attribute :kind, Types::String
 
+  def to_s
+    "#{name}, #{number} - #{complement}, #{zip_code}, #{city}, #{state}"
+  end
+
 end
