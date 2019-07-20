@@ -1,29 +1,30 @@
-class Domains::Routing::Repositories::AddressRepository < Core::Repository
+class Domains::Routing::Repositories::AddressRepository
 
-  self.persistence = Domains::Routing::Persistence.current
-  self.persistence_identifier_field = :id
-  self.persistence_model = Domains::Routing::Repositories::Models::Address
-  self.entity_class = Domains::Routing::Entities::Address
+  def find(id)
+    model = Domains::Routing::Repositories::Models::Address.find(id)
 
-  def convert_persistence_object_to_entity(persistence_object)
-    persistence_attributes = persistence_object.attributes
-
-    entity_attributes = {
-      "id" => persistence_object.id,
-      "name" => persistence_object.name,
-      "number" => persistence_object.number,
-      "complement" => persistence_object.complement,
-      "zip_code" => persistence_object.zip_code,
-      "city" => persistence_object.city,
-      "state" => persistence_object.state,
-      "kind" => persistence_object.kind
-    }
-
-    entity_class.new(persistence_attributes.merge(entity_attributes))
+    Domains::Routing::Entities::Address.new(
+      id: model.id,
+      name: model.name,
+      number: model.number,
+      complement: model.complement,
+      zip_code: model.zip_code,
+      city: model.city,
+      state: model.state,
+      kind: model.kind
+    )
   end
 
-  def convert_entity_attrs_to_persistence_object_attrs(entity)
-    entity.attributes
+  def create(entity)
+    Domains::Routing::Repositories::Models::Address.create(
+      name: entity.name,
+      number: entity.number,
+      complement: entity.complement,
+      zip_code: entity.zip_code,
+      city: entity.city,
+      state: entity.state,
+      kind: entity.kind
+    )
   end
 
 end

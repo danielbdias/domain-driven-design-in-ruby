@@ -1,26 +1,15 @@
-class Domains::Routing::Interactors::TraceRoute < Core::Interactor
+class Domains::Routing::Interactors::TraceRoute
 
-  repository :address_repository do
-    Domains::Routing::Repositories::AddressRepository.new
-  end
+  def execute(origin_id:, destination_id:, gps_type:)
+    address_repository = Domains::Routing::Repositories::AddressRepository.new
+    gps_repository = Domains::Routing::Repositories::GPSRepository.new
 
-  repository :gps_repository do
-    Domains::Routing::Repositories::GPSRepository.new
-  end
+    origin = address_repository.find(origin_id)
+    destination = address_repository.find(destination_id)
 
-  contract Domains::Routing::Contracts::TraceRoute
-  step :trace_route
-  expose :route
+    gps = gps_repository.find_by_type(gps_type)
 
-  def trace_route(attributes:, **)
-    origin = address_repository.find(attributes[:origin_id])
-    destination = address_repository.find(attributes[:destination_id])
-
-    gps = gps_repository.find_by(type: attributes[:gps_type])
-
-    route = gps.calculate(origin, destination)
-
-    Success(route: route)
+    gps.calculate(origin, destination)
   end
 
 end

@@ -5,6 +5,6 @@ class Domains::Routing::Clients::TrollMaps
       Domains::Routing::ValueObjects::RouteInstruction.new(order: 2, description: "Pronto !")
     ]
 
-    Domains::Routing::ValueObjects::Route.new(origin, destination, instructions)
+    Domains::Routing::ValueObjects::Route.new(origin: origin, destination: destination, instructions: instructions)
   end
 end
