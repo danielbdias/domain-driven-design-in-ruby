@@ -8,6 +8,7 @@ services:
       - DATABASE_HOST=postgres
       - DATABASE_PASSWORD=password
       - DATABASE_USER=root
+      - DATABASE_URL=postgres://root:password@postgres/example
     working_dir: /project
     volumes:
       - .:/project

@@ -1,0 +1,290 @@
+en:
+  contract:
+    or: "or"
+
+    errors:
+      array?: "must be an array"
+
+      empty?: "must be empty"
+
+      excludes?: "must not include %{value}"
+
+      excluded_from?:
+        arg:
+          default: "must not be one of: %{list}"
+          range: "must not be one of: %{list_left} - %{list_right}"
+
+      exclusion?: "must not be one of: %{list}"
+
+      eql?: "must be equal to %{left}"
+
+      not_eql?: "must not be equal to %{left}"
+
+      filled?: "must be filled"
+
+      format?: "is in invalid format"
+
+      number?: "must be a number"
+
+      odd?: "must be odd"
+
+      even?: "must be even"
+
+      gt?: "must be greater than %{num}"
+
+      gteq?: "must be greater than or equal to %{num}"
+
+      hash?: "must be a hash"
+
+      included_in?:
+        arg:
+          default: "must be one of: %{list}"
+          range: "must be one of: %{list_left} - %{list_right}"
+
+      inclusion?: "must be one of: %{list}"
+
+      includes?: "must include %{value}"
+
+      bool?: "must be boolean"
+
+      true?: "must be true"
+
+      false?: "must be false"
+
+      int?: "must be an integer"
+
+      float?: "must be a float"
+
+      decimal?: "must be a decimal"
+
+      date?: "must be a date"
+
+      date_time?: "must be a date time"
+
+      time?: "must be a time"
+
+      key?: "is missing"
+
+      attr?: "is missing"
+
+      lt?: "must be less than %{num}"
+
+      lteq?: "must be less than or equal to %{num}"
+
+      max_size?: "size cannot be greater than %{num}"
+
+      min_size?: "size cannot be less than %{num}"
+
+      nil?: "cannot be defined"
+
+      str?: "must be a string"
+
+      type?: "must be %{type}"
+
+      size?:
+        arg:
+          default: "size must be %{size}"
+          range: "size must be within %{size_left} - %{size_right}"
+
+        value:
+          string:
+            arg:
+              default: "length must be %{size}"
+              range: "length must be within %{size_left} - %{size_right}"
+
+      not:
+        empty?: "cannot be empty"
+
+es:
+  contract:
+    or: "o"
+
+    errors:
+      array?: "debe ser una lista"
+
+      empty?: "debe estar vacío"
+
+      excludes?: "no debe incluir %{value}"
+
+      excluded_from?:
+        arg:
+          default: "no debe ser uno de: %{list}"
+          range: "no debe ser uno de: %{list_left} - %{list_right}"
+
+      exclusion?: "no debe ser uno de: %{list}"
+
+      eql?: "debe ser igual a %{left}"
+
+      not_eql?: "no debe ser igual a %{left}"
+
+      filled?: "debe ser llenado"
+
+      format?: "está en formato inválido"
+
+      number?: "debe ser un número"
+
+      odd?: "debe ser un número impar"
+
+      even?: "debe ser un número par"
+
+      gt?: "debe ser mayor que %{num}"
+
+      gteq?: "debe ser mayor o igual que %{num}"
+
+      hash?: "debe ser un hash"
+
+      included_in?:
+        arg:
+          default: "debe ser uno de: %{list}"
+          range: "debe ser uno de: %{list_left} - %{list_right}"
+
+      inclusion?: "debe ser uno de: %{list}"
+
+      includes?: "debe incluir %{value}"
+
+      bool?: "debe ser booleano"
+
+      true?: "debe ser cierto"
+
+      false?: "debe ser falso"
+
+      int?: "debe ser un entero"
+
+      float?: "debe ser de tipo float"
+
+      decimal?: "debe ser un decimal"
+
+      date?: "debe ser una fecha"
+
+      date_time?: "debe ser una fecha y hora"
+
+      time?: "debe ser una hora"
+
+      key?: "está faltando"
+
+      attr?: "está faltando"
+
+      lt?: "debe ser menor que %{num}"
+
+      lteq?: "debe ser menor o igual a %{num}"
+
+      max_size?: "el tamaño no puede ser mayor que %{num}"
+
+      min_size?: "el tamaño no puede ser menor que %{num}"
+
+      nil?: "debe ser nulo"
+
+      str?: "debe ser una string"
+
+      type?: "debe ser de tipo %{type}"
+
+      size?:
+        arg:
+          default: "el tamaño debe ser %{size}"
+          range: "el tamaño debe estar dentro de %{size_left} e %{size_right}"
+
+        value:
+          string:
+            arg:
+              default: "debe tener %{size} caracter(es)"
+              range: "debe tener entre %{size_left} y %{size_right} caracteres"
+
+      not:
+        empty?: "no puede estar vacío"
+
+pt-BR:
+  contract:
+    or: "ou"
+
+    errors:
+      array?: "deve ser uma lista"
+
+      empty?: "deve ser vazio"
+
+      excludes?: "não deve incluir %{value}"
+
+      excluded_from?:
+        arg:
+          default: "não deve ser um elemento da lista: %{list}"
+          range: "não deve ser um valor entre: %{list_left} - %{list_right}"
+
+      exclusion?: "não deve ser um elemento da lista: %{list}"
+
+      eql?: "deve ser igual a %{left}"
+
+      not_eql?: "não deve ser igual a %{left}"
+
+      filled?: "deve estar preenchido"
+
+      format?: "está em um formato inválido"
+
+      number?: "deve ser um número"
+
+      odd?: "deve ser um número ímpar"
+
+      even?: "deve ser um número par"
+
+      gt?: "deve ser maior que %{num}"
+
+      gteq?: "deve ser maior ou igual a %{num}"
+
+      hash?: "deve ser um hash"
+
+      included_in?:
+        arg:
+          default: "deve ser um elemento da lista: %{list}"
+          range: "deve ser entre: %{list_left} - %{list_right}"
+
+      inclusion?: "deve ser um elemento da lista: %{list}"
+
+      includes?: "deve incluir %{value}"
+
+      bool?: "deve ser um booleano"
+
+      true?: "deve ser verdadeiro"
+
+      false?: "deve ser falso"
+
+      int?: "deve ser um inteiro"
+
+      float?: "deve ser do tipo float"
+
+      decimal?: "deve ser um decimal"
+
+      date?: "deve ser uma data"
+
+      date_time?: "deve ser uma data e hora"
+
+      time?: "deve ser um horário"
+
+      key?: "está faltando"
+
+      attr?: "está faltando"
+
+      lt?: "deve ser menor que %{num}"
+
+      lteq?: "deve ser menor or igual a %{num}"
+
+      max_size?: "tamanho não pode ser maior que %{num}"
+
+      min_size?: "tamanho não pode ser menor que %{num}"
+
+      nil?: "deve ser nulo"
+
+      str?: "deve ser uma string"
+
+      type?: "deve ser do tipo %{type}"
+
+      size?:
+        arg:
+          default: "deve ter %{size} elemento(s)"
+          range: "deve ter entre %{size_left} e %{size_right} elementos"
+
+        value:
+          string:
+            arg:
+              default: "deve ter %{size} caracter(es)"
+              range: "deve ter entre %{size_left} e %{size_right} caracteres"
+
+      not:
+        empty?: "não pode ser vazio"
